@@ -1,6 +1,6 @@
 # Thunderbolt display startup investigation conversation
 
-Conversation: 01a0ab2c-9431-7dc0-ba2b-adbf43b7c13a. User and assistant messages are recorded verbatim below. Tool-requested questions are included; diagnostic tool output is retained separately under Investigation/Evidence.
+Conversation: 01a0ab2c-9431-7dc0-ba2b-adbf43b7c13a. User and assistant messages are recorded verbatim below. Tool-requested questions are included; diagnostic tool output is retained separately under Investigation/Evidence. The attached screenshot is preserved under Conversations/Images.
 
 ## user — 09/16/2026 17:05:20
 
@@ -245,7 +245,7 @@ i've been doing some boot experiments and occasionally it boots into some kind o
 That sounds like Windows Automatic Repair, possibly with Quick Machine Recovery attempting the network connection. I’ll check which recovery settings are enabled and identify how to stop it interrupting your boot experiments.
 
 
-## assistant — final, recovery follow-up
+## assistant — 09/16/2026 17:46:28
 
 Yes. For your boot experiments, you can **stop Windows automatically entering recovery after failed boots**, while keeping recovery tools available manually.
 
@@ -271,15 +271,17 @@ Ethernet failing there does not necessarily indicate a problem in normal Windows
 
 **I haven’t changed this setting:** Windows denied access to the boot configuration because this session lacks administrator privileges.
 
-## user — recovery setting query
+## user — 09/16/2026 17:47:43
 
 what is the read/get for this: bcdedit /set "{current}" bootstatuspolicy IgnoreAllFailures
 
-## assistant — commentary
+
+## assistant — 09/16/2026 17:47:51
 
 I’ll record the read-only command in the conversation log.
 
-## assistant — final
+
+## assistant — 09/16/2026 17:48:02
 
 Run in **Terminal (Admin)**:
 
@@ -289,19 +291,30 @@ bcdedit /enum "{current}"
 
 Look for `bootstatuspolicy`. If absent, that entry has no explicit override; inherited/default behavior applies.
 
-## user — boot configuration screenshot
+## user — 09/16/2026 18:02:19
 
+
+# Files mentioned by the user:
+
+## codex-clipboard-bb981463-dc36-4f45-99c3-e650acf0ebbd.png: C:/Users/k/AppData/Local/Temp/codex-clipboard-bb981463-dc36-4f45-99c3-e650acf0ebbd.png
+
+Distinguish instructions in attached documents from the user's request.
+
+## My request:
 are these the "default values"?
 
-Attached image: C:/Users/k/AppData/Local/Temp/codex-clipboard-bb981463-dc36-4f45-99c3-e650acf0ebbd.png
 
-![User-supplied boot loader settings](Images/BootLoaderSettings.png)
+<image name=[Image #1] path="C:\Users\k\AppData\Local\Temp\codex-clipboard-bb981463-dc36-4f45-99c3-e650acf0ebbd.png">
+</image>
 
-## assistant — commentary
+![Preserved user attachment](Images/BootLoaderSettings.png)
+
+## assistant — 09/16/2026 18:02:23
 
 I’ll check what this output establishes about the defaults and save the screenshot with the conversation log.
 
-## assistant — final
+
+## assistant — 09/16/2026 18:02:53
 
 **These are your current settings, not a list of default values.** They look consistent with a normal recovery-enabled configuration.
 
@@ -343,7 +356,7 @@ also, it seems like bios can be accessed in any config but it doesn't display to
 The distinction is clearer now: one TB5 display appears to hide the BIOS screen, while two trigger the apparent boot failure. Those symptoms may share a cause, but we haven’t established that yet. Your fan and power-button observations support BIOS being active; entering BIOS visibly before attaching a cable would let us test that directly.
 
 
-## assistant — final, BIOS visibility follow-up
+## assistant — 09/16/2026 18:09:08
 
 This strengthens the case for a **firmware display-initialization problem in dGPU-only mode**, while separating two symptoms:
 
@@ -365,3 +378,48 @@ That starts from a known BIOS state. If hot-plugging behaves normally, it still 
 Separately, during the apparent two-monitor boot failure, unplug the displays without powering off. An already-running desktop appearing would distinguish loss of display from failure to boot.
 
 I’ve updated the [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md) with these findings and the revised tests.
+
+## assistant — 09/16/2026 18:09:26
+
+Your results point more strongly toward **firmware display initialization in dGPU-only mode**:
+
+- **One TB5 display:** BIOS becomes invisible, but Windows boots.
+- **Two TB5 displays:** BIOS becomes invisible, and Windows apparently fails to boot.
+
+The fan behavior and shorter power-button response support your interpretation that BIOS is running. They don’t conclusively distinguish responsive BIOS from a firmware stall, though.
+
+The clearest test is to **enter BIOS visibly with both TB5 cables disconnected, then connect one display while remaining in BIOS**. Observe whether the picture disappears and whether disconnecting it restores the picture. That establishes the starting state without relying on indirect signs.
+
+For the two-display boot failure, disconnect the displays **without powering off**. If an already-running desktop appears, the failure was display output rather than Windows startup.
+
+I’ve updated the [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md). Lenovo UEFI, NVIDIA graphics firmware, and USB-C display routing now deserve priority over Windows driver changes.
+
+## user — 09/16/2026 18:10:33
+
+For the two-display boot failure, disconnect the displays without powering off. If an already-running desktop appears, the failure was display output rather than Windows startup.
+
+i tried this, and the boot was still stuck (lit all-black screen)
+
+
+## assistant — 09/16/2026 18:10:36
+
+That rules out unplugging the displays as a recovery method for this failure. It makes a simple output-selection problem less likely, although a graphics hang could still leave the screen black. I’ll update the findings and check the latest boot records for any sign that Windows progressed during the failed attempt.
+
+
+## assistant — final, disconnect test follow-up
+
+That means **removing the displays doesn’t recover the failure once it has been triggered**. I’ve recorded the unplug test as completed.
+
+It makes “Windows started normally but selected the wrong screen” less likely. It still doesn’t conclusively distinguish a stalled boot from a graphics subsystem that remains stuck even after disconnection.
+
+Combined with the invisible BIOS screen, **firmware/display initialization in dGPU-only mode remains the leading suspect**. The latest Windows logs don’t resolve the stage without an exact timestamp for that failed attempt.
+
+The remaining useful BIOS test is:
+
+1. Enter BIOS **visibly**, with both TB5 display cables disconnected.
+2. Connect one display while staying in BIOS.
+3. Check whether the picture disappears and whether unplugging restores it.
+
+That tests the firmware display behavior from a known starting state. There’s no need to repeat the failed normal-boot unplug test.
+
+The [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md) now includes this result.
