@@ -205,7 +205,7 @@ also, the boot with both monitors connected to both tb5 ports works fine when gr
 That narrows it considerably. Since both cables work at startup in hybrid mode, and both work after startup in dGPU-only mode, the leading suspect is how the NVIDIA display path initializes during dGPU-only startup. I’ll keep the investigation and proposed tests focused on dGPU-only mode.
 
 
-## assistant — final
+## assistant — 09/16/2026 17:14:18
 
 The leading explanation is a **dGPU-only display initialization bug during startup**, involving the NVIDIA graphics path and the two USB-C DisplayPort outputs. The exact firmware or driver responsible is still unproven.
 
@@ -213,10 +213,10 @@ Your comparisons narrow it substantially:
 
 | Configuration                           | Result                         |
 | --------------------------------------- | ------------------------------ |
-| dGPU-only, both USB-C displays at boot  | Fails with black screen        |
-| dGPU-only, one USB-C plus HDMI          | Boots                          |
-| dGPU-only, second USB-C added afterward | Both displays work             |
-| Hybrid, both USB-C displays at boot     | Boots                          |
+| dGPU-only, both USB-C displays at boot    | Fails with black screen        |
+| dGPU-only, one USB-C plus HDMI            | Boots                          |
+| dGPU-only, second USB-C added afterward   | Both displays work             |
+| Hybrid, both USB-C displays at boot       | Boots                          |
 
 Hybrid is useful diagnostic evidence; **all proposed next steps stay in dGPU-only mode**.
 
@@ -234,3 +234,39 @@ Also, during a black-screen stall, unplugging one cable without powering off cou
 For now, HDMI plus USB-C—or connecting the second USB-C display after startup—preserves dGPU-only operation.
 
 [Full investigation and evidence](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md) are saved in the repository. No settings, drivers, or firmware were changed.
+
+## user — 09/16/2026 17:44:55
+
+i've been doing some boot experiments and occasionally it boots into some kind of windows recovery thingy that attempts to diagnose issues, attempts connect to the internet and fails (which is weird because i'm connected via ethernet), and then i just press enter twice to continue to boot. this is annoying, so is there a way to disable this auto-diagnose thing?
+
+
+## assistant — 09/16/2026 17:45:01
+
+That sounds like Windows Automatic Repair, possibly with Quick Machine Recovery attempting the network connection. I’ll check which recovery settings are enabled and identify how to stop it interrupting your boot experiments.
+
+
+## assistant — final, recovery follow-up
+
+Yes. For your boot experiments, you can **stop Windows automatically entering recovery after failed boots**, while keeping recovery tools available manually.
+
+Open **Terminal (Admin)** and run:
+
+```powershell
+bcdedit /set "{current}" bootstatuspolicy IgnoreAllFailures
+```
+
+This tells Windows to attempt normal startup despite recorded boot, shutdown, or checkpoint failures. It does not fix the underlying display problem. [Microsoft’s documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set#boot-settings)
+
+To remove that override afterward:
+
+```powershell
+bcdedit /deletevalue "{current}" bootstatuspolicy
+```
+
+While the override is active, genuine startup failures also won’t trigger this automatic recovery path. You can still enter recovery manually using **Shift + Restart**.
+
+The internet-connecting screen sounds like **Quick Machine Recovery**. Turning it off under **Settings → System → Recovery → Quick machine recovery** disables the online repair attempt, but Windows can still launch local Startup Repair—so that toggle alone would not eliminate the interruption you described. [Microsoft’s explanation](https://learn.microsoft.com/en-us/windows/configuration/quick-machine-recovery/)
+
+Ethernet failing there does not necessarily indicate a problem in normal Windows: recovery runs in a separate environment with its own drivers. A missing Ethernet driver is one possible explanation, which I haven’t verified. [Recovery environment documentation](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/customize-windows-re?view=windows-11)
+
+**I haven’t changed this setting:** Windows denied access to the boot configuration because this session lacks administrator privileges.
