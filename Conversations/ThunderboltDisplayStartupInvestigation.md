@@ -423,3 +423,30 @@ The remaining useful BIOS test is:
 That tests the firmware display behavior from a known starting state. There’s no need to repeat the failed normal-boot unplug test.
 
 The [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md) now includes this result.
+
+## user — visible BIOS hot-plug test
+
+i disconnected all external displays, booted into the bios, and verified that the bios gui worked as expected.
+then, i connected a display to a tb5 port. that seemed to do nothing: nothing was output to the display, the bios continued to be shown on the laptop screen, and the bios seemed to work normally.
+
+## assistant — commentary
+
+That narrows the BIOS symptom to a display being present during startup: connecting it after BIOS setup is visible doesn’t disrupt the laptop screen or setup. I’ll record this result and revise the diagnosis.
+
+## assistant — final
+
+This points to **which displays are present during firmware initialization** as the important difference.
+
+Your test establishes that:
+
+- BIOS initializes and works normally with no external displays.
+- Attaching one TB5 display afterward leaves the laptop’s BIOS screen working.
+- The newly connected external display never becomes active.
+
+That last point limits the conclusion: the firmware may simply leave the new output uninitialized. This test doesn’t show that the external display path was successfully exercised, but it does show that connecting the cable afterward doesn’t disrupt the working BIOS session.
+
+The leading hypothesis is now **a problem discovering, selecting, or initializing displays already connected at startup in dGPU-only mode**. Lenovo UEFI, NVIDIA graphics firmware, and USB-C display routing remain the main suspects. Whether that also causes the two-monitor boot stall, or whether the stall occurs during the subsequent Windows handoff, remains unresolved.
+
+This gives Lenovo a precise comparison: **TB5 display connected before startup → invisible BIOS; connected after entering BIOS → internal BIOS remains usable.**
+
+I’ve recorded the completed test in the [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md).
