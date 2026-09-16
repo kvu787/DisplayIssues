@@ -288,3 +288,33 @@ bcdedit /enum "{current}"
 ```
 
 Look for `bootstatuspolicy`. If absent, that entry has no explicit override; inherited/default behavior applies.
+
+## user — boot configuration screenshot
+
+are these the "default values"?
+
+Attached image: C:/Users/k/AppData/Local/Temp/codex-clipboard-bb981463-dc36-4f45-99c3-e650acf0ebbd.png
+
+![User-supplied boot loader settings](Images/BootLoaderSettings.png)
+
+## assistant — commentary
+
+I’ll check what this output establishes about the defaults and save the screenshot with the conversation log.
+
+## assistant — final
+
+**These are your current settings, not a list of default values.** They look consistent with a normal recovery-enabled configuration.
+
+For the setting we’re discussing:
+
+- **`bootstatuspolicy` is absent:** no explicit override exists on `{current}`; inherited/default behavior applies.
+- **`recoveryenabled Yes`:** automatic recovery is enabled.
+- **`bootmenupolicy Standard`:** this controls the boot-menu interface, separately from the failure policy. [Microsoft documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set#boot-settings)
+
+So, if you set `bootstatuspolicy IgnoreAllFailures`, this removes that change and returns this particular setting to its pictured state:
+
+```powershell
+bcdedit /deletevalue "{current}" bootstatuspolicy
+```
+
+The screenshot alone doesn’t prove that **every** listed setting is at its factory default.
