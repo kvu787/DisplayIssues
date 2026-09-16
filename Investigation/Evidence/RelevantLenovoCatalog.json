@@ -1,0 +1,169 @@
+[
+  {
+    "DocId": "DS576006",
+    "Title": "BIOS Update for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "RZCN50WW"
+    },
+    "Category": {
+      "Name": "BIOS/UEFI",
+      "Classify": "dl-category-bios",
+      "ID": "5AC6A815-321D-440E-8833-B07A93E0428C"
+    },
+    "Files": [
+      {
+        "Name": "BIOS Update",
+        "Version": "RZCN50WW",
+        "URL": "https://download.lenovo.com/consumer/mobiles/rzcn50ww.exe",
+        "Date": {
+          "Unix": 1787133600000
+        }
+      },
+      {
+        "Name": "BIOS Update README",
+        "Version": "RZCN50WW",
+        "URL": "https://download.lenovo.com/consumer/mobiles/rzcn50ww.txt",
+        "Date": {
+          "Unix": 1787133660000
+        }
+      }
+    ]
+  },
+  {
+    "DocId": "DS575979",
+    "Title": "Intel VGA Driver for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "32.0.101.8724"
+    },
+    "Category": {
+      "Name": "Display and Video Graphics",
+      "Classify": "dl-category-video",
+      "ID": "635380F4-448F-4129-AA77-265289D96F6F"
+    },
+    "Files": {
+      "Name": "Intel VGA Driver",
+      "Version": "32.0.101.8724",
+      "URL": "https://download.lenovo.com/consumer/mobiles/2elg040fuhaxb8h0.exe",
+      "Date": {
+        "Unix": 1783330380000
+      }
+    }
+  },
+  {
+    "DocId": "DS575971",
+    "Title": "Lenovo Dispatcher 3.1 Driver for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "3.2.0.26"
+    },
+    "Category": {
+      "Name": "Motherboard Devices (Backplanes, core chipset, onboard video, PCIe switches)",
+      "Classify": "dl-category-chipset",
+      "ID": "FB762CAD-DE8B-49C2-A04B-809B4958F608"
+    },
+    "Files": {
+      "Name": "Lenovo Dispatcher 3.1 Driver",
+      "Version": "3.2.0.26",
+      "URL": "https://download.lenovo.com/consumer/mobiles/01df050feklkgug0.exe",
+      "Date": {
+        "Unix": 1779083340000
+      }
+    }
+  },
+  {
+    "DocId": "DS575978",
+    "Title": "Intel Dynamic Platform and Thermal Framework (DPTF) Driver for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "dtt(9.1.10007.1466)_ipf(2.3.20303.5058)"
+    },
+    "Category": {
+      "Name": "Motherboard Devices (Backplanes, core chipset, onboard video, PCIe switches)",
+      "Classify": "dl-category-chipset",
+      "ID": "FB762CAD-DE8B-49C2-A04B-809B4958F608"
+    },
+    "Files": {
+      "Name": "Intel Dynamic Platform and Thermal Framework (DPTF) Driver",
+      "Version": "dtt(9.1.10007.1466)_ipf(2.3.20303.5058)",
+      "URL": "https://download.lenovo.com/consumer/mobiles/2elg030fw61588h0.exe",
+      "Date": {
+        "Unix": 1779083400000
+      }
+    }
+  },
+  {
+    "DocId": "DS575992",
+    "Title": "Intel Management Engine Interface (MEI) Driver for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "2552.8.10.0"
+    },
+    "Category": {
+      "Name": "Motherboard Devices (Backplanes, core chipset, onboard video, PCIe switches)",
+      "Classify": "dl-category-chipset",
+      "ID": "FB762CAD-DE8B-49C2-A04B-809B4958F608"
+    },
+    "Files": {
+      "Name": "Intel Management Engine Interface (MEI) Driver",
+      "Version": "2552.8.10.0",
+      "URL": "https://download.lenovo.com/consumer/mobiles/2elg030fbrpw78h0.exe",
+      "Date": {
+        "Unix": 1779084060000
+      }
+    }
+  },
+  {
+    "DocId": "DS575995",
+    "Title": "NVIDIA VGA Driver for Windows 11 (64-bit) - Legion 9 18IAX10",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "32.0.15.9611"
+    },
+    "Category": {
+      "Name": "Display and Video Graphics",
+      "Classify": "dl-category-video",
+      "ID": "635380F4-448F-4129-AA77-265289D96F6F"
+    },
+    "Files": {
+      "Name": "NVIDIA VGA Driver",
+      "Version": "32.0.15.9611",
+      "URL": "https://download.lenovo.com/consumer/mobiles/2elg050f9mdlf8h0.exe",
+      "Date": {
+        "Unix": 1779084180000
+      }
+    }
+  },
+  {
+    "DocId": "DS580490",
+    "Title": "Flash BIOS update for Windows 11 (64-bit) - Legion 9 18IAX10 ",
+    "SummaryInfo": {
+      "Priority": "Recommended",
+      "Version": "RZME50WW"
+    },
+    "Category": {
+      "Name": "BIOS/UEFI",
+      "Classify": "dl-category-bios",
+      "ID": "5AC6A815-321D-440E-8833-B07A93E0428C"
+    },
+    "Files": [
+      {
+        "Name": "Flash BIOS update",
+        "Version": "RZME50WW",
+        "URL": "https://download.lenovo.com/consumer/mobiles/rzme50ww.exe",
+        "Date": {
+          "Unix": 1785317520000
+        }
+      },
+      {
+        "Name": "Flash BIOS update README",
+        "Version": "RZME50WW",
+        "URL": "https://download.lenovo.com/consumer/mobiles/rzme50ww.txt",
+        "Date": {
+          "Unix": 1785390660000
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+       System Mux Support: Mux Support Inactive - Ok
+           Mux Target GPU: dGPU
+           Card name: NVIDIA GeForce RTX 5090 Laptop GPU
+        Current Mode: 3840 x 2400 (32 bit) (240Hz)
+         HDR Support: Supported
+    Display Topology: Extend
+ Display Color Space: DXGI_COLOR_SPACE_RGB_FULL_G22_NONE_P709
+        Monitor Name: Lenovo HDR Display
+       Monitor Model: NE18NZ2
+         Output Type: Displayport Embedded
+      Advanced Color: AdvancedColorSupported 
+      Driver Version: 32.0.15.9649
+ Hybrid Graphics GPU: Discrete
+    Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
+           Card name: NVIDIA GeForce RTX 5090 Laptop GPU
+        Current Mode: 2560 x 1440 (32 bit) (120Hz)
+         HDR Support: Supported
+    Display Topology: Extend
+ Display Color Space: DXGI_COLOR_SPACE_RGB_FULL_G22_NONE_P709
+        Monitor Name: Generic PnP Monitor
+       Monitor Model: PA278QGV
+         Output Type: Displayport External
+      Advanced Color: AdvancedColorSupported 
+      Driver Version: 32.0.15.9649
+ Hybrid Graphics GPU: Discrete
+    Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
+           Card name: NVIDIA GeForce RTX 5090 Laptop GPU
+        Current Mode: 2560 x 1440 (32 bit) (120Hz)
+         HDR Support: Supported
+    Display Topology: Extend
+ Display Color Space: DXGI_COLOR_SPACE_RGB_FULL_G22_NONE_P709
+        Monitor Name: Generic PnP Monitor
+       Monitor Model: PA278QGV
+         Output Type: HDMI
+      Advanced Color: AdvancedColorSupported 
+      Driver Version: 32.0.15.9649
+ Hybrid Graphics GPU: Discrete
+    Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
+         Driver Version: 32.0.100.4778
+            Driver Date: 4/27/2026 17:00:00
+         Driver Version: 1.4.5.7 (English)
+         Driver Version: 1.4.5.7 (English)
+         Driver Version: 10.0.26100.9457 (English)
+         Driver Version: 6.0.9921.1 (English)
+         Driver Version: 10.0.26100.9457 (English)
+         Driver Version: 10.0.26100.9457 (English)
+         Driver Version: 10.0.26100.9457 (English)
+         Driver Version: 10.0.26100.9457 (English)
+         Driver Version: 6.0.9921.1 (English)
+         Driver Version: 10.0.26100.9457 (English)

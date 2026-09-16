@@ -1,0 +1,881 @@
+{
+  "CapturedAt": "2026-09-16T10:06:50.7229565-07:00",
+  "Computer": {
+    "Manufacturer": "LENOVO",
+    "Model": "83EY",
+    "SystemFamily": "Legion 9 18IAX10",
+    "SystemSKUNumber": "LENOVO_MT_83EY_BU_idea_FM_Legion 9 18IAX10"
+  },
+  "Bios": {
+    "SMBIOSBIOSVersion": "RZCN50WW",
+    "ReleaseDate": "2026-06-24T17:00:00-07:00"
+  },
+  "OperatingSystem": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200",
+    "LastBootUpTime": "2026-09-16T09:56:59.5-07:00"
+  },
+  "Graphics": {
+    "Name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "DriverVersion": "32.0.15.9649",
+    "DriverDate": "2026-05-04T17:00:00-07:00",
+    "Status": "OK"
+  },
+  "Devices": [
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{12524B33-D72D-47D3-9C41-98FD104B743E}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "1010009"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{12524B33-D72D-47D3-9C41-98FD104B743E}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 16842761
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 0
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{D62C1510-729E-AD49-8943-FB355832E414}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "6001"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{D62C1510-729E-AD49-8943-FB355832E414}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 24577
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 0
+        }
+      ]
+    },
+    {
+      "Name": "Intel(R) Innovation Platform Framework Processor Participant",
+      "Status": "OK",
+      "Class": "System",
+      "InstanceId": "PCI\\VEN_8086&DEV_AD03&SUBSYS_380217AA&REV_01\\3&11583659&0&20",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_LocationInfo",
+          "Data": "PCI bus 0, device 4, function 0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI\\PNP0A08\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "PCIROOT(0)#PCI(0400)",
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(TCPU)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2026-01-13T16:00:00-08:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "2.3.20303.5058"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "oem60.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Intel"
+        }
+      ]
+    },
+    {
+      "Name": "UCM-UCSI ACPI Device",
+      "Status": "OK",
+      "Class": "UCM",
+      "InstanceId": "ACPI\\USBC000\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\PNP0C08\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "1.2"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "ACPI(_SB_)#ACPI(UBTC)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.8972"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "ucmucsiacpiclient.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{832AF090-2EF9-7C47-8F6D-B405C8C7F156}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "CF"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{832AF090-2EF9-7C47-8F6D-B405C8C7F156}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 207
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 0
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{C96A71B7-1BC7-EE90-BAAD-0A9A732C847A}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "6104"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{C96A71B7-1BC7-EE90-BAAD-0A9A732C847A}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 24836
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 1
+        }
+      ]
+    },
+    {
+      "Name": "USB4 Root Router (2.0)",
+      "Status": "OK",
+      "Class": "USB",
+      "InstanceId": "USB4\\ROOT_DEVICE_ROUTER&VID_8086&PID_5781\\7&28079B3A&0&0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_8086&DEV_5781&SUBSYS_00008086&REV_84&USB4_MS_CM\\40EA46000000ECBE00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "60.60"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2026-08-23T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9278"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "usb4devicerouter.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "System Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{BE248459-CAF2-4B09-AF02-69B6A49974C1}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "1500000"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{BE248459-CAF2-4B09-AF02-69B6A49974C1}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 1
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 22020096
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 20054016
+        }
+      ]
+    },
+    {
+      "Name": "Lenovo HDR Display",
+      "Status": "OK",
+      "Class": "Monitor",
+      "InstanceId": "DISPLAY\\BOE0D5B\\5&16B35F9F&0&UID8449",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_10DE&DEV_2C58&SUBSYS_3F9417AA&REV_A1\\78522E02542DB04800"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(RP01)#ACPI(PXSX)#ACPI(LCD0)",
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(RP01)#ACPI(PXSX)#ACPI(DSP1)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2025-10-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "1.70.1.30"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "oem58.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Lenovo"
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{8D4C1617-0D43-4AB1-8250-A6CD98A4ABC8}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "419989"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{8D4C1617-0D43-4AB1-8250-A6CD98A4ABC8}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 4299145
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 0
+        }
+      ]
+    },
+    {
+      "Name": "PCI Express Root Port",
+      "Status": "OK",
+      "Class": "System",
+      "InstanceId": "PCI\\VEN_8086&DEV_7ECA&SUBSYS_381717AA&REV_10\\3&11583659&0&31",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_LocationInfo",
+          "Data": "PCI bus 0, device 6, function 1"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI\\PNP0A08\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_PciDevice_FirmwareErrorHandling",
+          "Data": false
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "PCIROOT(0)#PCI(0601)",
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(RP17)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9278"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "pci.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{865D322C-6AC7-4734-B43E-55DB5A557D63}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "79C"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{865D322C-6AC7-4734-B43E-55DB5A557D63}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 1948
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 1000
+        }
+      ]
+    },
+    {
+      "Name": "Generic Monitor (PA278QGV)",
+      "Status": "OK",
+      "Class": "Monitor",
+      "InstanceId": "DISPLAY\\AUSAA0F\\5&16B35F9F&0&UID8448",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_10DE&DEV_2C58&SUBSYS_3F9417AA&REV_A1\\78522E02542DB04800"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9278"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "monitor.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "Generic Monitor (PA278QGV)",
+      "Status": "OK",
+      "Class": "Monitor",
+      "InstanceId": "DISPLAY\\AUSAA0F\\5&16B35F9F&0&UID8454",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_10DE&DEV_2C58&SUBSYS_3F9417AA&REV_A1\\78522E02542DB04800"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9278"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "monitor.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "USB4(TM) Host Router (Microsoft)",
+      "Status": "OK",
+      "Class": "USB",
+      "InstanceId": "PCI\\VEN_8086&DEV_5781&SUBSYS_00008086&REV_84&USB4_MS_CM\\40EA46000000ECBE00",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_LocationInfo",
+          "Data": "PCI bus 6, device 0, function 0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_8086&DEV_5780&SUBSYS_11112222&REV_84\\40EA46000000ECBE00"
+        },
+        {
+          "KeyName": "DEVPKEY_PciDevice_FirmwareErrorHandling",
+          "Data": false
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "PCIROOT(0)#PCI(0601)#PCI(0000)#PCI(0000)#PCI(0000)",
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(RP17)#ACPI(PXSX)#ACPI(TBDH)#ACPI(NHI4)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2026-08-23T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9278"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "usb4hostrouter.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        }
+      ]
+    },
+    {
+      "Name": "USB4 Virtual power coordination device",
+      "Status": "OK",
+      "Class": null,
+      "InstanceId": "USB4\\VIRTUAL_POWER_PDO\\7&28079B3A&0&0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_LocationInfo",
+          "Data": "USB4 Domain"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_8086&DEV_5781&SUBSYS_00008086&REV_84&USB4_MS_CM\\40EA46000000ECBE00"
+        }
+      ]
+    },
+    {
+      "Name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+      "Status": "OK",
+      "Class": "Display",
+      "InstanceId": "PCI\\VEN_10DE&DEV_2C58&SUBSYS_3F9417AA&REV_A1\\78522E02542DB04800",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_LocationInfo",
+          "Data": "PCI bus 2, device 0, function 0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "PCI\\VEN_8086&DEV_AE4D&SUBSYS_380317AA&REV_10\\3&11583659&0&30"
+        },
+        {
+          "KeyName": "DEVPKEY_PciDevice_FirmwareErrorHandling",
+          "Data": false
+        },
+        {
+          "KeyName": "DEVPKEY_Device_LocationPaths",
+          "Data": [
+            "PCIROOT(0)#PCI(0600)#PCI(0000)",
+            "ACPI(_SB_)#ACPI(PC00)#ACPI(RP01)#ACPI(PXSX)"
+          ]
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2026-05-04T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "32.0.15.9649"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "oem68.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "NVIDIA"
+        }
+      ]
+    },
+    {
+      "Name": "Device Firmware",
+      "Status": "OK",
+      "Class": "Firmware",
+      "InstanceId": "UEFI\\RES_{20EF4108-6C64-D049-B6DE-11EE35980B8F}\\0",
+      "Properties": [
+        {
+          "KeyName": "DEVPKEY_Device_ProblemCode",
+          "Data": 0
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Parent",
+          "Data": "ACPI_HAL\\UEFI\\0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_FirmwareVersion",
+          "Data": "CF"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverDate",
+          "Data": "2006-06-20T17:00:00-07:00"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.4768"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverInfPath",
+          "Data": "c_firmware.inf"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Id",
+          "Data": "{20EF4108-6C64-D049-B6DE-11EE35980B8F}"
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Type",
+          "Data": 2
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_Version",
+          "Data": 207
+        },
+        {
+          "KeyName": "DEVPKEY_FirmwareResource_LowestSupportedVersion",
+          "Data": 0
+        }
+      ]
+    }
+  ],
+  "MonitorConnections": [
+    {
+      "InstanceName": "DISPLAY\\AUSAA0F\\5&16b35f9f&0&UID8448_0",
+      "Active": true,
+      "VideoOutputTechnology": 5
+    },
+    {
+      "InstanceName": "DISPLAY\\AUSAA0F\\5&16b35f9f&0&UID8454_0",
+      "Active": true,
+      "VideoOutputTechnology": 10
+    },
+    {
+      "InstanceName": "DISPLAY\\BOE0D5B\\5&16b35f9f&0&UID8449_0",
+      "Active": true,
+      "VideoOutputTechnology": 11
+    }
+  ],
+  "MonitorModes": [
+    {
+      "InstanceName": "DISPLAY\\AUSAA0F\\5&16b35f9f&0&UID8448_0",
+      "PreferredMonitorSourceModeIndex": 6,
+      "PreferredMode": {
+        "HorizontalActivePixels": 2560,
+        "VerticalActivePixels": 1440,
+        "PixelClockRate": 241500000,
+        "VerticalRefreshRateNumerator": 1509375,
+        "VerticalRefreshRateDenominator": 25177
+      }
+    },
+    {
+      "InstanceName": "DISPLAY\\AUSAA0F\\5&16b35f9f&0&UID8454_0",
+      "PreferredMonitorSourceModeIndex": 6,
+      "PreferredMode": {
+        "HorizontalActivePixels": 2560,
+        "VerticalActivePixels": 1440,
+        "PixelClockRate": 241500000,
+        "VerticalRefreshRateNumerator": 1509375,
+        "VerticalRefreshRateDenominator": 25177
+      }
+    },
+    {
+      "InstanceName": "DISPLAY\\BOE0D5B\\5&16b35f9f&0&UID8449_0",
+      "PreferredMonitorSourceModeIndex": 0,
+      "PreferredMode": {
+        "HorizontalActivePixels": 3840,
+        "VerticalActivePixels": 2400,
+        "PixelClockRate": 2342400000,
+        "VerticalRefreshRateNumerator": 4287340080,
+        "VerticalRefreshRateDenominator": 38125
+      }
+    }
+  ],
+  "Problems": null
+}

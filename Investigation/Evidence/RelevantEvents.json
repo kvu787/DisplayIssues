@@ -1,0 +1,115 @@
+{
+  "LatestRestart": [
+    {
+      "TimeCreated": "2026-09-16T09:48:11.0562519-07:00",
+      "Id": 1074,
+      "ProviderName": "User32",
+      "Message": "The process C:\\WINDOWS\\Explorer.EXE (DESKTOP-9H66NOJ) has initiated the restart of computer DESKTOP-9H66NOJ on behalf of user DESKTOP-9H66NOJ\\k for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: restart\r\n Comment: ",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='User32' Guid='{b0aa8734-56f7-41cc-b2f4-de228e98b946}' EventSourceName='User32'/><EventID Qualifiers='32768'>1074</EventID><Version>0</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:48:11.0562519Z'/><EventRecordID>8332</EventRecordID><Correlation/><Execution ProcessID='1672' ThreadID='1840'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-21-116367710-1198599648-1734086401-1001'/></System><EventData><Data Name='param1'>C:\\WINDOWS\\Explorer.EXE (DESKTOP-9H66NOJ)</Data><Data Name='param2'>DESKTOP-9H66NOJ</Data><Data Name='param3'>Other (Unplanned)</Data><Data Name='param4'>0x0</Data><Data Name='param5'>restart</Data><Data Name='param6'></Data><Data Name='param7'>DESKTOP-9H66NOJ\\k</Data></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:48:15.3256766-07:00",
+      "Id": 7002,
+      "ProviderName": "Microsoft-Windows-Winlogon",
+      "Message": "User Logoff Notification for Customer Experience Improvement Program",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Winlogon' Guid='{dbe9b383-7cf3-4331-91cc-a3cb16a3b538}'/><EventID>7002</EventID><Version>0</Version><Level>4</Level><Task>1102</Task><Opcode>0</Opcode><Keywords>0x2000200000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:48:15.3256766Z'/><EventRecordID>8333</EventRecordID><Correlation/><Execution ProcessID='2276' ThreadID='2564'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='TSId'>1</Data><Data Name='UserSid'>S-1-5-21-116367710-1198599648-1734086401-1001</Data></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:48:32.6290552-07:00",
+      "Id": 7043,
+      "ProviderName": "Service Control Manager",
+      "Message": "The Lenovo Dispatcher service service did not shut down properly after receiving a preshutdown control.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Service Control Manager' Guid='{555908d1-a6d7-4695-8e1e-26931d2012f4}' EventSourceName='Service Control Manager'/><EventID Qualifiers='49152'>7043</EventID><Version>0</Version><Level>2</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8080000000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:48:32.6290552Z'/><EventRecordID>8336</EventRecordID><Correlation ActivityID='{349c5548-45a8-0001-681a-bf34a845dd01}'/><Execution ProcessID='1872' ThreadID='34200'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security/></System><EventData><Data Name='param1'>Lenovo Dispatcher service</Data><Binary>4C0065006E006F0076006F00500072006F0063006500730073004D0061006E006100670065006D0065006E0074000000</Binary></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:48:32.679536-07:00",
+      "Id": 6006,
+      "ProviderName": "EventLog",
+      "Message": "The Event log service was stopped.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='EventLog'/><EventID Qualifiers='32768'>6006</EventID><Version>0</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:48:32.6795360Z'/><EventRecordID>8335</EventRecordID><Correlation/><Execution ProcessID='3732' ThreadID='34280'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security/></System><EventData><Binary>0100000009000000</Binary></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:50:41.0804931-07:00",
+      "Id": 12,
+      "ProviderName": "Microsoft-Windows-Kernel-General",
+      "Message": "The operating system started at system time ‎2026‎-‎09‎-‎16T16:50:40.500000000Z.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-General' Guid='{a68ca8b7-004f-d7b6-a698-07e2de0f1f5d}'/><EventID>12</EventID><Version>0</Version><Level>4</Level><Task>1</Task><Opcode>0</Opcode><Keywords>0x8000000000000080</Keywords><TimeCreated SystemTime='2026-09-16T16:50:41.0804931Z'/><EventRecordID>8346</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MajorVersion'>10</Data><Data Name='MinorVersion'>0</Data><Data Name='BuildVersion'>26100</Data><Data Name='QfeVersion'>9457</Data><Data Name='ServiceVersion'>0</Data><Data Name='BootMode'>0</Data><Data Name='StartTime'>2026-09-16T16:50:40.5000000Z</Data></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:50:41.0806764-07:00",
+      "Id": 20,
+      "ProviderName": "Microsoft-Windows-Kernel-Boot",
+      "Message": "The last shutdown's success status was false. The last boot's success status was false.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Boot' Guid='{15ca44ff-4d7a-4baa-bba5-0998955e531e}'/><EventID>20</EventID><Version>1</Version><Level>4</Level><Task>31</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:50:41.0806764Z'/><EventRecordID>8351</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='LastShutdownGood'>false</Data><Data Name='LastBootGood'>false</Data><Data Name='LastBootId'>38</Data><Data Name='BootStatusPolicy'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:50:43.1442418-07:00",
+      "Id": 41,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>41</EventID><Version>10</Version><Level>1</Level><Task>63</Task><Opcode>0</Opcode><Keywords>0x8000400000000002</Keywords><TimeCreated SystemTime='2026-09-16T16:50:43.1442418Z'/><EventRecordID>8374</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BugcheckCode'>0</Data><Data Name='BugcheckParameter1'>0x0</Data><Data Name='BugcheckParameter2'>0x0</Data><Data Name='BugcheckParameter3'>0x0</Data><Data Name='BugcheckParameter4'>0x0</Data><Data Name='SleepInProgress'>0</Data><Data Name='PowerButtonTimestamp'>134340509918835398</Data><Data Name='BootAppStatus'>0</Data><Data Name='Checkpoint'>0</Data><Data Name='ConnectedStandbyInProgress'>false</Data><Data Name='SystemSleepTransitionsToOn'>0</Data><Data Name='CsEntryScenarioInstanceId'>0</Data><Data Name='BugcheckInfoFromEFI'>false</Data><Data Name='CheckpointStatus'>0</Data><Data Name='CsEntryScenarioInstanceIdV2'>0</Data><Data Name='LongPowerButtonPressDetected'>false</Data><Data Name='LidReliability'>false</Data><Data Name='InputSuppressionState'>0</Data><Data Name='PowerButtonSuppressionState'>0</Data><Data Name='LidState'>1</Data><Data Name='WHEABootErrorCount'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:50:52.5828833-07:00",
+      "Id": 6005,
+      "ProviderName": "EventLog",
+      "Message": "The Event log service was started.",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='EventLog'/><EventID Qualifiers='32768'>6005</EventID><Version>0</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:50:52.5828833Z'/><EventRecordID>8344</EventRecordID><Correlation/><Execution ProcessID='3756' ThreadID='3808'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security/></System><EventData><Binary>EA0709000300100010003200340038020000000000000000</Binary></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:50:52.9131335-07:00",
+      "Id": 7001,
+      "ProviderName": "Microsoft-Windows-Winlogon",
+      "Message": "User Logon Notification for Customer Experience Improvement Program",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Winlogon' Guid='{dbe9b383-7cf3-4331-91cc-a3cb16a3b538}'/><EventID>7001</EventID><Version>0</Version><Level>4</Level><Task>1101</Task><Opcode>0</Opcode><Keywords>0x2000200000000000</Keywords><TimeCreated SystemTime='2026-09-16T16:50:52.9131335Z'/><EventRecordID>8465</EventRecordID><Correlation/><Execution ProcessID='1916' ThreadID='2240'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='TSId'>1</Data><Data Name='UserSid'>S-1-5-21-116367710-1198599648-1734086401-1001</Data></EventData></Event>"
+    }
+  ],
+  "NvidiaTimeouts": [
+    {
+      "TimeCreated": "2026-09-15T15:58:08.4920691-07:00",
+      "Id": 153,
+      "ProviderName": "nvlddmkm",
+      "LevelDisplayName": "Error",
+      "Message": null,
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='nvlddmkm'/><EventID Qualifiers='0'>153</EventID><Version>0</Version><Level>2</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-09-15T22:58:08.4920691Z'/><EventRecordID>7232</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='13540'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security/></System><EventData><Data>\\Device\\00000112</Data><Data>Resetting TDR occurred on GPUID:200</Data><Binary>00000000020030000000000099000000000000000000000000000000000000000000000000000000</Binary></EventData></Event>"
+    },
+    {
+      "TimeCreated": "2026-09-15T15:54:12.678907-07:00",
+      "Id": 153,
+      "ProviderName": "nvlddmkm",
+      "LevelDisplayName": "Error",
+      "Message": null,
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='nvlddmkm'/><EventID Qualifiers='0'>153</EventID><Version>0</Version><Level>2</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-09-15T22:54:12.6789070Z'/><EventRecordID>7085</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='584'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security/></System><EventData><Data>\\Device\\00000104</Data><Data>Resetting TDR occurred on GPUID:200</Data><Binary>00000000020030000000000099000000000000000000000000000000000000000000000000000000</Binary></EventData></Event>"
+    }
+  ],
+  "ThunderboltUpstreamCorrectedError": [
+    {
+      "TimeCreated": "2026-09-15T21:39:13.6659597-07:00",
+      "Id": 17,
+      "ProviderName": "Microsoft-Windows-WHEA-Logger",
+      "LevelDisplayName": "Warning",
+      "Message": "A corrected hardware error has occurred.\r\n\r\nComponent: PCI Express Root Port\r\nError Source: Advanced Error Reporting (PCI Express)\r\n\r\nPrimary Bus:Device:Function: 0x0:0x6:0x1\r\nSecondary Bus:Device:Function: 0x0:0x0:0x0\r\nPrimary Device Name:PCI\\VEN_8086&DEV_7ECA&SUBSYS_381717AA&REV_10\r\nSecondary Device Name:",
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-WHEA-Logger' Guid='{c26c4f3c-3f66-4e99-8f8a-39405cfed220}'/><EventID>17</EventID><Version>1</Version><Level>3</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-09-16T04:39:13.6659597Z'/><EventRecordID>8031</EventRecordID><Correlation ActivityID='{c9d90b4d-7a2e-4296-9f01-1f784fee0c72}'/><Execution ProcessID='5252' ThreadID='6324'/><Channel>System</Channel><Computer>DESKTOP-9H66NOJ</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='ErrorSource'>4</Data><Data Name='FRUId'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='FRUText'></Data><Data Name='ValidBits'>0xdf</Data><Data Name='PortType'>4</Data><Data Name='Version'>0x101</Data><Data Name='Command'>0x506</Data><Data Name='Status'>0x10</Data><Data Name='Bus'>0x0</Data><Data Name='Device'>0x6</Data><Data Name='Function'>0x1</Data><Data Name='Segment'>0x0</Data><Data Name='SecondaryBus'>0x0</Data><Data Name='SecondaryDevice'>0x0</Data><Data Name='SecondaryFunction'>0x0</Data><Data Name='VendorID'>0x8086</Data><Data Name='DeviceID'>0x7eca</Data><Data Name='ClassCode'>0x30400</Data><Data Name='DeviceSerialNumber'>0x0</Data><Data Name='BridgeControl'>0x0</Data><Data Name='BridgeStatus'>0x0</Data><Data Name='UncorrectableErrorStatus'>0x0</Data><Data Name='CorrectableErrorStatus'>0x1000</Data><Data Name='HeaderLog'>00000000000000000000000000000000</Data><Data Name='PrimaryDeviceName'>PCI\\VEN_8086&amp;DEV_7ECA&amp;SUBSYS_381717AA&amp;REV_10</Data><Data Name='SecondaryDeviceName'></Data></EventData></Event>"
+    }
+  ],
+  "GraphicsReports": [
+    {
+      "TimeCreated": "2026-09-15T15:54:07.7387076-07:00",
+      "Id": 1001,
+      "ProviderName": "Windows Error Reporting",
+      "Message": "Fault bucket , type 0\r\nEvent Name: LiveKernelEvent\r\nResponse: Not available\r\nCab Id: 0\r\n\r\nProblem signature:\r\nP1: 117\r\nP2: aaaaaaaaaaaaaaaa\r\nP3: aaaaaaaaaaaaaaaa\r\nP4: aaaaaaaaaaaaaaaa\r\nP5: aaaaaaaaaaaaaaaa\r\nP6: 10_0_26200\r\nP7: 0_0\r\nP8: 256_1\r\nP9: \r\nP10: \r\n\r\nAttached files:\r\n\\\\?\\C:\\WINDOWS\\LiveKernelReports\\WATCHDOG\\WATCHDOG-20260915-1554.dmp\r\n\\\\?\\C:\\WINDOWS\\SystemTemp\\WER-80453-0.sysdata.xml\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.36028366-447a-4b4a-ba38-f532587e2556.tmp.xml\r\n\r\nThese files may be available here:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\Kernel_117_d5e35f226abd89d2d32cf73a8697e71be744a3_00000000_bf7dcddd-fe2d-4003-a68d-b2aa094184d5\r\n\r\nAnalysis symbol: \r\nRechecking for solution: 0\r\nReport Id: bf7dcddd-fe2d-4003-a68d-b2aa094184d5\r\nReport Status: 4\r\nHashed bucket: \r\nCab Guid: 0"
+    },
+    {
+      "TimeCreated": "2026-09-15T15:58:11.3741834-07:00",
+      "Id": 1001,
+      "ProviderName": "Windows Error Reporting",
+      "Message": "Fault bucket , type 0\r\nEvent Name: LiveKernelEvent\r\nResponse: Not available\r\nCab Id: 0\r\n\r\nProblem signature:\r\nP1: 117\r\nP2: aaaaaaaaaaaaaaaa\r\nP3: aaaaaaaaaaaaaaaa\r\nP4: aaaaaaaaaaaaaaaa\r\nP5: aaaaaaaaaaaaaaaa\r\nP6: 10_0_26200\r\nP7: 0_0\r\nP8: 256_1\r\nP9: \r\nP10: \r\n\r\nAttached files:\r\n\\\\?\\C:\\WINDOWS\\LiveKernelReports\\WATCHDOG\\WATCHDOG-20260915-1558.dmp\r\n\\\\?\\C:\\WINDOWS\\SystemTemp\\WER-153296-0.sysdata.xml\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.e39a1d60-0b0f-49f7-b7fa-5ea5183229f8.tmp.xml\r\n\r\nThese files may be available here:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\Kernel_117_d5e35f226abd89d2d32cf73a8697e71be744a3_00000000_6de5d153-fad3-4738-b4cb-416a17354219\r\n\r\nAnalysis symbol: \r\nRechecking for solution: 0\r\nReport Id: 6de5d153-fad3-4738-b4cb-416a17354219\r\nReport Status: 4\r\nHashed bucket: \r\nCab Guid: 0"
+    },
+    {
+      "TimeCreated": "2026-09-16T09:39:34.8415098-07:00",
+      "Id": 1001,
+      "ProviderName": "Windows Error Reporting",
+      "Message": "Fault bucket , type 0\r\nEvent Name: WindowsBlackScreenDiagnosticsV1\r\nResponse: Not available\r\nCab Id: 0\r\n\r\nProblem signature:\r\nP1: DWM\r\nP2: Unknown\r\nP3: ColorBits\r\nP4: Hotkey\r\nP5: 10.0.26100.9278\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nAttached files:\r\n\r\nThese files may be available here:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\Critical_DWM_7a9d9e2b6870cba62195c8ec178986a62de2f39_00000000_fb6559e9-5dcf-4b05-aa36-90ecedff39a7\r\n\r\nAnalysis symbol: \r\nRechecking for solution: 0\r\nReport Id: fb6559e9-5dcf-4b05-aa36-90ecedff39a7\r\nReport Status: 4\r\nHashed bucket: \r\nCab Guid: 0"
+    }
+  ]
+}
