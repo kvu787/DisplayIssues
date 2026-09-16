@@ -4,7 +4,7 @@ Investigated September 16, 2026. Times below are local Pacific Daylight Time.
 
 ## Assessment
 
-The strongest explanation is a **dGPU-only startup or restart initialization problem** in the laptop's dual USB-C DisplayPort output path. The specific faulty component is not yet established: Lenovo firmware, NVIDIA video firmware/UEFI display initialization, USB-C controller and graphics routing, the Windows NVIDIA driver, or their interaction with cable/monitor negotiation remain possible.
+The strongest explanation is a **dGPU-only startup display initialization problem**, with the latest experiments increasing suspicion of the firmware-controlled display path. The user now distinguishes two behaviors: any attached TB5 DisplayPort monitor prevents a visible BIOS setup screen, whereas two attached TB5 monitors cause an apparent Windows boot failure. These may share a cause, but that is not established. Lenovo UEFI, NVIDIA video firmware/Graphics Output Protocol (GOP), USB-C display routing, and cable/monitor negotiation are the leading areas to investigate. The Windows NVIDIA driver remains relevant to the later boot/handoff symptom, but would not itself draw the BIOS setup screen.
 
 The decisive observations are that both monitors work when the second USB-C-to-DisplayPort cable is connected after Windows starts in dGPU-only mode, and both attached monitors boot successfully in hybrid/dynamic mode. Together these isolate a dependence on graphics mode and startup timing. A fixed inability to operate two displays is unlikely. A cable or firmware timing problem is still possible even when the same hardware works after startup.
 
@@ -19,7 +19,7 @@ The decisive observations are that both monitors work when the second USB-C-to-D
 
 The latest failed restart has a gap in Windows logging. It cannot yet be classified conclusively as a firmware/POST hang, an early Windows startup hang, a shutdown hang, or a running system with no working display. A lit laptop backlight displaying black pixels does not distinguish those cases.
 
-No driver, firmware, display setting, or power setting was changed during this investigation. No reboot was initiated.
+The agent has not changed drivers, firmware, display settings, or boot settings, and has not initiated reboots. The user has performed connection and boot experiments separately. Guidance about an optional boot-status-policy override was provided; its application has not been verified.
 
 ## Confirmed observations
 
@@ -28,7 +28,26 @@ No driver, firmware, display setting, or power setting was changed during this i
 - User: both USB-C-to-DisplayPort monitors work if the second is connected after Windows starts.
 - User: both attached monitors boot successfully in hybrid/dynamic graphics mode; the observed startup issue is in dGPU-only mode. Hybrid mode is unavailable as a solution because of other issues.
 - User: Windows+Ctrl+Shift+B and `pnputil` display resets were used several times this morning. This is relevant when interpreting diagnostic reports and device restarts.
-- Each monitor/cable operating alone in each port, and unplugging one cable during an existing failed boot, have not been confirmed.
+- User follow-up: connecting displays to both TB5 ports causes apparent boot failure; every other tested display configuration boots. The exact list of individual cable/port permutations has not been recorded.
+- User follow-up: with a display attached to a TB5 port, BIOS setup produces no visible image on either the laptop or external monitors. The user believes setup is still running because fans become audible and approximately one second of power-button hold switches the machine off, compared with approximately five seconds in the other state.
+- Those fan and power-button observations support the user's interpretation on this machine, but are indirect indicators rather than proof that setup is fully responsive. Display loss and a machine hang remain distinguishable possibilities.
+- Unplugging a cable during an existing failed boot, and entering setup visibly before hot-plugging a TB5 display, have not been confirmed.
+
+## Follow-up: invisible BIOS setup versus apparent boot failure
+
+The user's later experiments change how the earlier F2 test should be interpreted. A blank screen after requesting setup cannot be treated as failure to enter setup. In particular, the one-TB5 arrangement reportedly boots Windows normally despite its missing BIOS picture.
+
+| dGPU-only connection at power-on | BIOS setup picture, user report | Windows startup, user report |
+| -------------------------------- | ------------------------------- | ---------------------------- |
+| No TB5 display                   | Visible in tested arrangement   | Works                        |
+| One TB5 display                  | No visible output on any screen | Works                        |
+| Two TB5 displays                 | No visible output on any screen | Apparent boot failure        |
+
+The GPU's firmware display implementation runs before the Windows native display driver takes over. Microsoft describes that transition in [Boot Screen Components](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-screen-components) and [Providing Seamless State Transitions](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/seamless-state-transitions-in-wddm-1-2-and-later). These explain the diagnostic boundary; they do not identify a known defect in this particular Lenovo model.
+
+The leading hypothesis is firmware display initialization or output selection that behaves differently in dGPU-only mode. A dual-output interaction may additionally stall boot or leave Windows without a visible display. Because display output is already unreliable before Windows, blankness alone is now especially weak evidence that the operating system failed to start. A completely separate Windows handoff issue also remains possible.
+
+A read-only follow-up collection at approximately 11:07 PDT found additional boot and unclean-shutdown records from the experiments. Those records do not identify the attached cables or whether F2 setup was requested, so they cannot assign a failure to a particular configuration without matching experiment timestamps. They are retained locally in `Evidence/Raw/FollowUpBootExperiments.json`.
 
 These cables use DisplayPort Alt Mode on USB-C; a Thunderbolt-capable socket does not make the cable a Thunderbolt display tunnel. Microsoft distinguishes these display connection types in its [USB4 requirements](https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/usb4-design-details-and-general-requirements).
 
@@ -56,7 +75,7 @@ DirectX diagnostics associate all three active displays with NVIDIA and report t
 
 Lenovo specifies up to four independent displays including the built-in panel. That supports treating this as abnormal behavior, although the specification alone does not prove every cable/topology combination. See [Lenovo's model specification, page 2](https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_9_18IAX10/Legion_9_18IAX10_Spec.pdf). ASUS lists DisplayPort and HDMI inputs for the [PA278QGV](https://www.asus.com/displays-desktops/monitors/proart/proart-display-pa278qv-gen2-pa278qgv/techspec/).
 
-## Latest failed restart
+## Initially investigated failed restart
 
 | September 16 time | Evidence                                                                          |
 | ----------------- | --------------------------------------------------------------------------------- |
@@ -101,13 +120,13 @@ The live [Lenovo catalog for this machine](https://pcsupport.lenovo.com/us/en/pr
 
 Keep dGPU-only mode throughout. Use the working HDMI-plus-DisplayPort configuration, or connect the second USB-C display after startup, as the practical workaround. The following tests require a convenient restart window and physical cable access; none was performed remotely.
 
-1. **At the next naturally occurring black-screen stall, unplug one USB-C display without pressing the power button.** Record whether a logo, spinning dots, sign-in screen, or an already-running desktop appears, and the exact time. This distinguishes several possible stages without another forced shutdown.
-2. **Compare firmware setup with one cable and then both cables connected before power-on.** From a fully shut-down machine, keep the lid open and use F2 at startup. If setup is reliably visible with one cable but stalls with both, focus on Lenovo firmware/controller/display negotiation; Windows driver reinstalls would not be the first test. Failure to see setup alone is not conclusive without the one-cable control.
-3. **If firmware setup works with both, compare cold startup and Windows Restart.** A restart-only failure points toward shutdown/reset sequencing; failure as Windows takes over favors the Windows graphics path. Record screen transitions and timestamps rather than applying additional resets during the first observation.
-4. **Verify each existing monitor/cable alone in each port.** If the problem follows one cable or port, investigate that path. If all four single-cable combinations work and only simultaneous attachment fails, shared initialization becomes more likely.
-5. **If the failure reaches Windows, try one controlled display or driver change at a time.** A temporary 60 Hz setting for all displays and disabling monitor Adaptive-Sync can test mode/negotiation sensitivity. If necessary, compare the model-specific Lenovo NVIDIA driver 596.11 against 596.49. These are diagnostic comparisons, not verified remedies. Avoid combining driver changes, graphics-mode changes, and firmware updates in one test.
+1. **Enter BIOS setup visibly with both TB5 display cables disconnected, then connect one TB5 display while remaining in setup.** Keep the lid open and make no configuration changes. Record whether the laptop's setup image disappears and whether the external screen gets an image. Disconnect that cable and observe again. If practical, repeat with the other port separately. This begins from a known firmware state, eliminating the need to infer entry solely from fans or power-button timing. A negative hot-plug result does not rule out a bug that only occurs when a display is present during firmware initialization.
+2. **If already in the apparently active but invisible setup state, disconnect all TB5 displays without restarting.** Seeing the setup screen immediately reappear would strongly confirm that setup was active with no usable output. No image appearing is inconclusive because firmware may not reinitialize the internal display after hot-unplug.
+3. **During a separate dual-TB5 normal boot that appears stuck, disconnect one cable and then, if necessary, both, without powering off.** Record whether a boot logo, spinning dots, sign-in screen, or already-running desktop appears. An existing desktop favors a display-output failure; renewed startup activity favors blocked initialization. Record exact times to match subsequent Windows startup/logon records. An absent log entry alone does not prove Windows never ran.
+4. **Keep a short record of the individual cable/port tests and cold-start versus restart outcomes.** The user's broad comparison already identifies dual-TB5 attachment as the trigger; precise permutations help Lenovo reproduce it without repeating unnecessary tests.
+5. **Prioritize firmware/display-output diagnosis for the BIOS symptom.** Windows refresh-rate changes or driver reinstalls do not directly control setup rendering. If evidence separately places the dual-display failure at the Windows graphics handoff, a temporary 60 Hz configuration, monitor Adaptive-Sync comparison, or model-specific Lenovo NVIDIA 596.11 driver comparison can be considered one at a time. These remain diagnostic comparisons, not verified remedies.
 
-If both-cable startup remains reproducibly broken with each individual cable/port working, provide Lenovo this report and the reproduction steps. Ask specifically about **dGPU-only dual DisplayPort Alt Mode startup/restart, with hybrid startup and dGPU-only hot-plug working**, on Legion 9 18IAX10 with BIOS RZCN50WW, RTX 5090 Laptop GPU, video firmware 98.03.5e.00.57, and USB4 router firmware 60.60. This is more precise than reporting a generic black screen.
+The current findings justify reporting a firmware/display-output issue to Lenovo. Include both symptoms explicitly: **in dGPU-only mode, any TB5 DisplayPort monitor makes BIOS setup invisible on all screens; two TB5 monitors also prevent a visible successful boot. Hybrid startup and dGPU-only hot-plug work.** Identify Legion 9 18IAX10, BIOS RZCN50WW, RTX 5090 Laptop GPU, video firmware 98.03.5e.00.57, and USB4 router firmware 60.60. Describe BIOS activity as inferred from repeatable fan/power-button behavior until a visible setup/hot-plug test confirms it.
 
 ## Evidence files
 
