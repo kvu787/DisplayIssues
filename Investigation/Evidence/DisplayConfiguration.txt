@@ -8,7 +8,7 @@
         Monitor Name: Lenovo HDR Display
        Monitor Model: NE18NZ2
          Output Type: Displayport Embedded
-      Advanced Color: AdvancedColorSupported 
+      Advanced Color: AdvancedColorSupported
       Driver Version: 32.0.15.9649
  Hybrid Graphics GPU: Discrete
     Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
@@ -20,7 +20,7 @@
         Monitor Name: Generic PnP Monitor
        Monitor Model: PA278QGV
          Output Type: Displayport External
-      Advanced Color: AdvancedColorSupported 
+      Advanced Color: AdvancedColorSupported
       Driver Version: 32.0.15.9649
  Hybrid Graphics GPU: Discrete
     Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
@@ -32,7 +32,7 @@
         Monitor Name: Generic PnP Monitor
        Monitor Model: PA278QGV
          Output Type: HDMI
-      Advanced Color: AdvancedColorSupported 
+      Advanced Color: AdvancedColorSupported
       Driver Version: 32.0.15.9649
  Hybrid Graphics GPU: Discrete
     Driver Date/Size: 5/4/2026 5:00:00 PM, 818088 bytes
