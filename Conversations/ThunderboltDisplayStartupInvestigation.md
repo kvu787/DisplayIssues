@@ -318,3 +318,50 @@ bcdedit /deletevalue "{current}" bootstatuspolicy
 ```
 
 The screenshot alone doesn’t prove that **every** listed setting is at its factory default.
+
+## user — 09/16/2026 18:06:34
+
+i did some experiments booting and various display configs. basically, it seems that connecting two displays to both tb5 ports causes boot failure. any other config is fine.
+
+also, it seems like bios can be accessed in any config, but it doesn't display to a monitor or to the laptop screen. if a display is connected to a tb5 port. the reason is think bios is still working even though i don't see it on display is that i hear the fans run audibly, and it takes only 1 second of holding the power button instead of 5 seconds to shut off the pc, and both of these observations i am fairly confident uniquely identify that bios is running.
+
+
+## assistant — 09/16/2026 18:06:38
+
+These tests make the dual-TB5 connection a much clearer trigger. The blank BIOS display with even one TB5 monitor also suggests a display problem before Windows loads. I’ll update the investigation, keeping your fan and power-button observations separate from what they can conclusively prove.
+
+
+## user — 09/16/2026 18:06:50
+
+i did some experiments booting and various display configs. basically, it seems that connecting two displays to both tb5 ports causes boot failure. any other config is fine.
+
+also, it seems like bios can be accessed in any config but it doesn't display to a monitor or to the laptop screen. if a display is connected to a tb5 port. the reason is think bios is still working even though i don't see it on display is that i hear the fans run audibly, and it takes only 1 second of holding the power button instead of 5 seconds to shut off the pc, and both of these observations i am fairly confident uniquely identify that bios is running.
+
+
+## assistant — 09/16/2026 18:07:10
+
+The distinction is clearer now: one TB5 display appears to hide the BIOS screen, while two trigger the apparent boot failure. Those symptoms may share a cause, but we haven’t established that yet. Your fan and power-button observations support BIOS being active; entering BIOS visibly before attaching a cable would let us test that directly.
+
+
+## assistant — final, BIOS visibility follow-up
+
+This strengthens the case for a **firmware display-initialization problem in dGPU-only mode**, while separating two symptoms:
+
+- **One TB5 display:** BIOS setup becomes invisible, but Windows can boot.
+- **Two TB5 displays:** BIOS setup is invisible, and normal boot appears to fail.
+
+Your fan and power-button observations are consistent with BIOS setup running without visible output. I’d record that as a strong working hypothesis, rather than conclude that BIOS cannot be entered.
+
+The firmware controls display output before the Windows graphics driver takes over. Consequently, **a confirmed loss of the BIOS picture would point toward Lenovo UEFI, NVIDIA graphics firmware, or USB-C display routing**. It would not be explained solely by a Windows graphics-driver problem. The two-monitor boot symptom could still involve the later handoff to Windows. [Microsoft’s description of that handoff](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/seamless-state-transitions-in-wddm-1-2-and-later)
+
+The clearest next experiment, keeping dGPU-only mode:
+
+1. Disconnect both TB5 display cables and enter BIOS with its screen visibly working.
+2. While staying in BIOS, connect **one** TB5 display.
+3. Observe whether the picture disappears, then disconnect it and see whether it returns.
+
+That starts from a known BIOS state. If hot-plugging behaves normally, it still leaves a problem specific to having the cable connected at power-on.
+
+Separately, during the apparent two-monitor boot failure, unplug the displays without powering off. An already-running desktop appearing would distinguish loss of display from failure to boot.
+
+I’ve updated the [investigation report](C:/Users/k/Repository/DisplayIssues/Investigation/ThunderboltDisplayInvestigation.md) with these findings and the revised tests.
