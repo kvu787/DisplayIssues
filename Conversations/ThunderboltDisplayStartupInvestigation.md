@@ -270,3 +270,21 @@ The internet-connecting screen sounds like **Quick Machine Recovery**. Turning i
 Ethernet failing there does not necessarily indicate a problem in normal Windows: recovery runs in a separate environment with its own drivers. A missing Ethernet driver is one possible explanation, which I haven’t verified. [Recovery environment documentation](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/customize-windows-re?view=windows-11)
 
 **I haven’t changed this setting:** Windows denied access to the boot configuration because this session lacks administrator privileges.
+
+## user — recovery setting query
+
+what is the read/get for this: bcdedit /set "{current}" bootstatuspolicy IgnoreAllFailures
+
+## assistant — commentary
+
+I’ll record the read-only command in the conversation log.
+
+## assistant — final
+
+Run in **Terminal (Admin)**:
+
+```powershell
+bcdedit /enum "{current}"
+```
+
+Look for `bootstatuspolicy`. If absent, that entry has no explicit override; inherited/default behavior applies.
